@@ -1,13 +1,17 @@
-import {Component, ElementRef, ViewChild} from "@angular/core";
+import {Component, ElementRef, Input, ViewChild} from "@angular/core";
+import {CommonModule} from "@angular/common";
 
 @Component({
     selector: 'u-button',
     templateUrl: 'button.component.html',
-    styleUrls: ['./button.component.scss']
+    styleUrls: ['./button.component.scss'],
+    standalone: true,
+    imports: [CommonModule]
 })
 export class ButtonComponent {
-    @ViewChild('buttonElement', { static: true }) buttonElement!: ElementRef;
+    @Input() variant!: 'primary' | 'danger';
 
+    @ViewChild('buttonElement', { static: true }) buttonElement!: ElementRef;
     public mouseX!: number;
     public mouseY!: number;
     public waveSize!: number;

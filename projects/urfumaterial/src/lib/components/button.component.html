@@ -1,6 +1,14 @@
 <button #buttonElement
         (mousemove)="onMouseMove($event)"
-        [ngStyle]="{'--mouse-x': mouseX + 'px', '--mouse-y': mouseY + 'px', '--wave-size': waveSize + 'px'}"
-        class="u-btn--accent">
+        [ngStyle]="{
+            '--mouse-x': mouseX + 'px',
+            '--mouse-y': mouseY + 'px',
+            '--wave-size': waveSize + 'px'
+        }"
+        [ngClass]="{
+            'u-btn--primary': variant === 'primary',
+            'u-btn--danger': variant === 'danger'
+        }"
+        class="u-btn">
     <ng-content></ng-content>
 </button>

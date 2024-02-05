@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UrfuMaterialModule } from 'urfumaterial';
+import {ButtonComponent} from "../../projects/urfumaterial/src/lib/components/button.component";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     standalone: true,
-    imports: [RouterOutlet, UrfuMaterialModule],
+    imports: [RouterOutlet, ButtonComponent],
 })
 export class AppComponent {
-  title = 'uikit';
+    onClick() {
+        console.log(1);
+    }
 }
