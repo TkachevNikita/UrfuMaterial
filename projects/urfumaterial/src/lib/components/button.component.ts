@@ -1,17 +1,17 @@
-import {Component, ElementRef, Input, ViewChild} from "@angular/core";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Host, Input, Optional, ViewChild} from "@angular/core";
 import {CommonModule} from "@angular/common";
+import {ButtonBasicDirective} from "../directives/button/button-basic.directive";
+import {ButtonOutlinedDirective} from "../directives/button/button-outlined.directive";
 
 @Component({
     selector: 'u-button',
     templateUrl: 'button.component.html',
     styleUrls: ['./button.component.scss'],
-    standalone: true,
-    imports: [CommonModule]
 })
 export class ButtonComponent {
     @Input() variant!: 'primary' | 'danger';
 
-    @ViewChild('buttonElement', { static: true }) buttonElement!: ElementRef;
+    @ViewChild('buttonElement') buttonElement!: ElementRef;
     public mouseX!: number;
     public mouseY!: number;
     public waveSize!: number;

@@ -9,10 +9,10 @@
     font-size: 14px;
     white-space: nowrap;
     cursor: pointer;
-    color: #fff;
     position: relative;
     transition: background-color .6s ease;
     overflow: hidden;
+
     &:after {
         content: "";
         position: absolute;
@@ -34,17 +34,43 @@
             height: var(--wave-size);
         }
     }
-    &--primary {
-        background-color: $primary;
-        &:hover {
-            background-color: $secondary-primary;
+
+    &--basic {
+        color: #fff;
+
+        &-primary {
+            background-color: $primary;
+            &:hover {
+                background-color: $secondary-primary;
+            }
+        }
+
+        &-danger {
+            background-color: $danger;
+            &:hover {
+                background-color: $secondary-danger;
+            }
         }
     }
 
-    &--danger {
-        background-color: $danger;
-        &:hover {
-            background-color: $secondary-danger;
+    &--outlined {
+        background-color: transparent;
+
+        &-primary {
+            border: 2px solid $primary;
+            color: $primary;
+            &:hover {
+                color: #fff;
+                background-color: $secondary-primary;
+            }
+        }
+
+        &-danger {
+            border: 2px solid $danger;
+            color: $danger;
+            &:hover {
+                background-color: $secondary-danger;
+            }
         }
     }
 }
