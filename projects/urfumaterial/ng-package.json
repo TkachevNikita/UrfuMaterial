@@ -1,7 +1,10 @@
 {
-  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/urfumaterial",
-  "lib": {
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/urfumaterial",
+    "lib": {
     "entryFile": "src/public-api.ts"
-  }
+    },
+    "assets": [
+        "src/styles.scss"
+    ]
 }

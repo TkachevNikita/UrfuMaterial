@@ -1,1 +1,6 @@
-<button>Кнопка!</button>
+<button #buttonElement
+        (mousemove)="onMouseMove($event)"
+        [ngStyle]="{'--mouse-x': mouseX + 'px', '--mouse-y': mouseY + 'px', '--wave-size': waveSize + 'px'}"
+        class="u-btn--accent">
+    <ng-content></ng-content>
+</button>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       urfumaterial works!
     </p>
   `,
-  styles: ``
+  styleUrls: []
 })
 export class UrfumaterialComponent {
 

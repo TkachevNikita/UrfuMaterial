@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {ButtonComponent} from "./components/button.component";
 import {UrfumaterialComponent} from "./urfumaterial.component";
+import {NgStyle} from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -8,6 +9,7 @@ import {UrfumaterialComponent} from "./urfumaterial.component";
         UrfumaterialComponent
     ],
     imports: [
+        NgStyle
     ],
     exports: [
         UrfumaterialComponent,
