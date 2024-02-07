@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'Urfu Material Icons';
+    src: url('../../assets/fonts/urfu-ui-icon-font.woff2') format('woff2');
+}
+[class*='icon-']:before{
+    display: inline-block;
+    font-family: 'Urfu Material Icons', sans-serif;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-folders:before {
+    content: "\e957";
+    color: #a7a7a7;
+}
+.icon-unlink:before {
+    content: "\e956";
+    color: #1e4391;
+}
+.icon-active:before {
+    content: "\e900";
+    color: #1e4391;
+}
+.icon-application:before {
+    content: "\e901";
+    color: #1e4391;
+}
+.icon-attention:before {
+    content: "\e902";
+    color: #ef302b;
+}
+.icon-basket:before {
+    content: "\e903";
+    color: #1e4391;
+}
+.icon-block:before {
+    content: "\e904";
+    color: #1e4391;
+}
+.icon-briefcase:before {
+    content: "\e905";
+    color: #1e4391;
+}
+.icon-calculator:before {
+    content: "\e906";
+    color: #1e4391;
+}
+.icon-calendar:before {
+    content: "\e907";
+    color: #1e4391;
+}
+.icon-catalog:before {
+    content: "\e908";
+    color: #1e4391;
+}
+.icon-chat:before {
+    content: "\e909";
+    color: #1e4391;
+}
+.icon-check:before {
+    content: "\e90a";
+    color: #3ba68c;
+}
+.icon-clock:before {
+    content: "\e90b";
+    color: #1e4391;
+}
+.icon-cloud:before {
+    content: "\e90c";
+    color: #1e4391;
+}
+.icon-copy:before {
+    content: "\e90d";
+    color: #1e4391;
+}
+.icon-correct:before {
+    content: "\e90e";
+    color: #1e4391;
+}
+.icon-cross:before {
+    content: "\e90f";
+    color: #ef302b;
+}
+.icon-cup:before {
+    content: "\e910";
+    color: #1e4391;
+}
+.icon-directory:before {
+    content: "\e911";
+    color: #1e4391;
+}
+.icon-doc:before {
+    content: "\e912";
+    color: #1e4391;
+}
+.icon-document:before {
+    content: "\e913";
+    color: #1e4391;
+}
+.icon-documents:before {
+    content: "\e914";
+    color: #1e4391;
+}
+.icon-down:before {
+    content: "\e915";
+    color: #1e4391;
+}
+.icon-down-arrow:before {
+    content: "\e916";
+    color: #1e4391;
+}
+.icon-download:before {
+    content: "\e917";
+    color: #1e4391;
+}
+.icon-download-line:before {
+    content: "\e918";
+    color: #1e4391;
+}
+.icon-dropdown:before {
+    content: "\e919";
+    color: #1e4391;
+}
+.icon-dropdown-horizontal:before {
+    content: "\e91a";
+    color: #1e4391;
+}
+.icon-entrance:before {
+    content: "\e91b";
+    color: #1e4391;
+}
+.icon-extracurricular-activities:before {
+    content: "\e91c";
+    color: #1e4391;
+}
+.icon-filter:before {
+    content: "\e91d";
+    color: #1e4391;
+}
+.icon-filter-mobile:before {
+    content: "\e91e";
+    color: #1e4391;
+}
+.icon-folder:before {
+    content: "\e91f";
+    color: #e98446;
+}
+.icon-full-screen:before {
+    content: "\e920";
+    color: #1e4391;
+}
+.icon-hidden:before {
+    content: "\e921";
+    color: #1e4391;
+}
+.icon-home:before {
+    content: "\e922";
+    color: #1e4391;
+}
+.icon-img:before {
+    content: "\e923";
+    color: #467be3;
+}
+.icon-information:before {
+    content: "\e924";
+    color: #1e4391;
+}
+.icon-jpg:before {
+    content: "\e925";
+    color: #467be3;
+}
+.icon-left:before {
+    content: "\e926";
+    color: #1e4391;
+}
+.icon-left-arrow:before {
+    content: "\e927";
+    color: #1e4391;
+}
+.icon-letter:before {
+    content: "\e928";
+    color: #1e4391;
+}
+.icon-like:before {
+    content: "\e929";
+    color: #1e4391;
+}
+.icon-link:before {
+    content: "\e92a";
+    color: #1e4391;
+}
+.icon-list-view:before {
+    content: "\e92b";
+    color: #7a7a7a;
+}
+.icon-lk-role:before {
+    content: "\e92c";
+    color: #1e4391;
+}
+.icon-minus:before {
+    content: "\e92d";
+    color: #1e4391;
+}
+.icon-moderation:before {
+    content: "\e92e";
+    color: #1e4391;
+}
+.icon-news:before {
+    content: "\e92f";
+    color: #1e4391;
+}
+.icon-notify:before {
+    content: "\e930";
+    color: #1e4391;
+}
+.icon-ok:before {
+    content: "\e931";
+    color: #1e4391;
+}
+.icon-pdf:before {
+    content: "\e932";
+    color: #ef302b;
+}
+.icon-pencil:before {
+    content: "\e933";
+    color: #1e4391;
+}
+.icon-people:before {
+    content: "\e934";
+    color: #1e4391;
+}
+.icon-plus:before {
+    content: "\e935";
+    color: #1e4391;
+}
+.icon-png:before {
+    content: "\e936";
+    color: #467be3;
+}
+.icon-ppt:before {
+    content: "\e937";
+    color: #e98446;
+}
+.icon-question:before {
+    content: "\e938";
+    color: #1e4391;
+}
+.icon-rating:before {
+    content: "\e939";
+    color: #1e4391;
+}
+.icon-right:before {
+    content: "\e93a";
+    color: #1e4391;
+}
+.icon-right-arrow:before {
+    content: "\e93b";
+    color: #1e4391;
+}
+.icon-role:before {
+    content: "\e93c";
+    color: #1e4391;
+}
+.icon-save:before {
+    content: "\e93d";
+    color: #1e4391;
+}
+.icon-search:before {
+    content: "\e93e";
+    color: #1e4391;
+}
+.icon-setting:before {
+    content: "\e93f";
+    color: #1e4391;
+}
+.icon-settlement:before {
+    content: "\e940";
+    color: #1e4391;
+}
+.icon-sorting:before {
+    content: "\e941";
+    color: #1e4391;
+}
+.icon-star:before {
+    content: "\e942";
+    color: #1e4391;
+}
+.icon-star-top20:before {
+    content: "\e943";
+    color: #147246;
+}
+.icon-star-top50:before {
+    content: "\e944";
+    color: #1e4391;
+}
+.icon-submenu:before {
+    content: "\e945";
+    color: #ef302b;
+}
+.icon-svg:before {
+    content: "\e946";
+    color: #a872bc;
+}
+.icon-table-view:before {
+    content: "\e947";
+    color: #1e4391;
+}
+.icon-telephone:before {
+    content: "\e948";
+    color: #1e4391;
+}
+.icon-test-tube:before {
+    content: "\e949";
+    color: #1e4391;
+}
+.icon-top100:before {
+    content: "\e94a";
+    color: #ef302b;
+}
+.icon-top20:before {
+    content: "\e94b";
+    color: #147246;
+}
+.icon-top50:before {
+    content: "\e94c";
+    color: #1e4391;
+}
+.icon-union:before {
+    content: "\e94d";
+    color: #1e4391;
+}
+.icon-university:before {
+    content: "\e94e";
+    color: #1e4391;
+}
+.icon-up:before {
+    content: "\e94f";
+    color: #1e4391;
+}
+.icon-up-arrow:before {
+    content: "\e950";
+    color: #1e4391;
+}
+.icon-upload:before {
+    content: "\e951";
+    color: #1e4391;
+}
+.icon-user:before {
+    content: "\e952";
+    color: #1e4391;
+}
+.icon-warning:before {
+    content: "\e953";
+    color: #ef302b;
+}
+.icon-xls:before {
+    content: "\e954";
+    color: #3ba68c;
+}
+.icon-zip:before {
+    content: "\e955";
+    color: #0987ae;
+}

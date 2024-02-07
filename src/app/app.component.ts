@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {UButtonModule, UTabContainerModule, UTabModule} from "urfumaterial";
-import {BrowserModule} from "@angular/platform-browser";
+import {UButtonModule, UIconModule, UTabContainerModule, UTabModule} from "urfumaterial";
 
 @Component({
     selector: 'app-root',
@@ -13,6 +12,7 @@ import {BrowserModule} from "@angular/platform-browser";
         UButtonModule,
         UTabContainerModule,
         UTabModule,
+        UIconModule,
     ],
 })
 export class AppComponent {

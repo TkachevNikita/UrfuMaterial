@@ -17,3 +17,7 @@ export * from './lib/components/tabs/tab/tab.component';
 export * from './lib/components/tabs/tab/tab.module';
 export * from './lib/components/tabs/tab-container/tab-container.component';
 export * from './lib/components/tabs/tab-container/tab-container.module'
+
+//Иконки
+export * from './lib/components/icon/icon.component'
+export * from './lib/components/icon/icon.module';
