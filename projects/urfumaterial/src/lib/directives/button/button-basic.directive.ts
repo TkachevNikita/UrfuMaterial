@@ -1,5 +1,5 @@
 import {AfterViewInit, Directive, Renderer2} from "@angular/core";
-import {ButtonComponent} from "../../components/button.component";
+import {ButtonComponent} from "../../components/button/button.component";
 
 @Directive({
     selector: '[basic]',

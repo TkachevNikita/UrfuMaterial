@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {UrfuMaterialModule} from "urfumaterial";
-import {CommonModule} from "@angular/common";
+import {UButtonModule} from "urfumaterial";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     standalone: true,
-    imports: [RouterOutlet, UrfuMaterialModule],
+    imports: [RouterOutlet, UButtonModule],
 })
 export class AppComponent {
     onClick() {

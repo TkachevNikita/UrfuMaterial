@@ -1,5 +1,5 @@
-@import "../../styles/styles";
-@import "../../styles/_constants";
+@import "../../../styles/styles";
+@import "../../../styles/constants";
 
 .u-btn {
     padding: 15px 50px;
@@ -13,6 +13,7 @@
     position: relative;
     transition: background-color .6s ease;
     overflow: hidden;
+    width: 100%;
 
     &:disabled {
         opacity: 0.5;
