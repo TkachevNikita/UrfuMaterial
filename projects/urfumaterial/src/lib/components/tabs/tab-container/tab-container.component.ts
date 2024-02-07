@@ -17,7 +17,7 @@ export class TabContainerComponent implements AfterContentInit {
     }
 
     public selectTab(tab: UTabComponent) {
-        this.tabs.toArray().forEach(t => t.activeTab = false);
+        this.tabs.forEach(t => t.activeTab = false);
         tab.activeTab = true;
     }
 }
