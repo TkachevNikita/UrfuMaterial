@@ -1,4 +1,5 @@
-@import "../../_styles";
+@import "../../styles/styles";
+@import "../../styles/_constants";
 
 .u-btn {
     padding: 15px 50px;
@@ -13,27 +14,39 @@
     transition: background-color .6s ease;
     overflow: hidden;
 
-    &:after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: 50%;
-        left: 50%;
-        top: var(--mouse-y);
-        left: var(--mouse-x);
-        transform-style: flat;
-        transform: translate3d(-50%,-50%,0);
-        background: rgba(white,.1);
-        border-radius: 100%;
-        transition: width .2s ease, height .2s ease;
-    }
-    &:active {
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
         &:after {
-            width: var(--wave-size);
-            height: var(--wave-size);
+
         }
     }
+
+    &:not([disabled]) {
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            top: var(--mouse-y);
+            left: var(--mouse-x);
+            transform-style: flat;
+            transform: translate3d(-50%,-50%,0);
+            background: rgba(white,.1);
+            border-radius: 100%;
+            transition: width .2s ease, height .2s ease;
+        }
+        &:active {
+            &:after {
+                width: var(--wave-size);
+                height: var(--wave-size);
+            }
+        }
+    }
+
 
     &--basic {
         color: #fff;
@@ -51,6 +64,13 @@
                 background-color: $secondary-danger;
             }
         }
+
+        &-simple {
+            background-color: $simple;
+            &:hover {
+                background-color: $simple;
+            }
+        }
     }
 
     &--outlined {
@@ -59,21 +79,42 @@
         &-primary {
             border: 2px solid $primary;
             color: $primary;
-            &:hover {
-                color: #fff;
-                background-color: $secondary-primary;
+
+            &:not([disabled]) {
+                &:hover {
+                    color: #fff;
+                    border-color: $secondary-primary;
+                    background-color: $secondary-primary;
+                }
             }
         }
 
         &-danger {
             border: 2px solid $danger;
             color: $danger;
-            &:hover {
-                background-color: $secondary-danger;
+
+            &:not([disabled]) {
+                &:hover {
+                    color: #fff;
+                    border-color: $secondary-danger;
+                    background-color: $secondary-danger;
+                }
+            }
+        }
+
+        &-simple {
+            border: 2px solid $simple;
+            color: #222;
+
+            &:not([disabled]) {
+                &:hover {
+                    background-color: $simple;
+                }
             }
         }
     }
 }
+
 
 
 

@@ -5,16 +5,19 @@ import {ButtonComponent} from "../../components/button.component";
     selector: '[outlined]',
 })
 export class ButtonOutlinedDirective implements AfterViewInit {
-    constructor(private host: ButtonComponent, private _renderer: Renderer2) { }
+    constructor(private _host: ButtonComponent, private _renderer: Renderer2) { }
 
     ngAfterViewInit() {
-        this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--outlined');
-        switch (this.host.variant) {
+        this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--outlined');
+        switch (this._host.variant) {
             case "danger":
-                this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--outlined-danger');
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--outlined-danger');
                 break;
             case "primary":
-                this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--outlined-primary');
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--outlined-primary');
+                break;
+            case "simple":
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--outlined-simple');
                 break;
         }
     }

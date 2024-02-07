@@ -1,5 +1,6 @@
 <button #buttonElement
         (mousemove)="onMouseMove($event)"
+        [attr.disabled]="isDisabled"
         [ngStyle]="{
             '--mouse-x': mouseX + 'px',
             '--mouse-y': mouseY + 'px',

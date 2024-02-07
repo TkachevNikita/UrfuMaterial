@@ -5,16 +5,19 @@ import {ButtonComponent} from "../../components/button.component";
     selector: '[basic]',
 })
 export class ButtonBasicDirective implements AfterViewInit {
-    constructor(private host: ButtonComponent, private _renderer: Renderer2) { }
+    constructor(private _host: ButtonComponent, private _renderer: Renderer2) { }
 
-    ngAfterViewInit() {
-        this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--basic');
-        switch (this.host.variant) {
+    public ngAfterViewInit() {
+        this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--basic');
+        switch (this._host.variant) {
             case "danger":
-                this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--basic-danger');
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--basic-danger');
                 break;
             case "primary":
-                this._renderer.addClass(this.host.buttonElement.nativeElement, 'u-btn--basic-primary');
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--basic-primary');
+                break;
+            case "simple":
+                this._renderer.addClass(this._host.buttonElement.nativeElement, 'u-btn--basic-simple');
                 break;
         }
     }

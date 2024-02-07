@@ -1,7 +1,10 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Host, Input, Optional, ViewChild} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {ButtonBasicDirective} from "../directives/button/button-basic.directive";
-import {ButtonOutlinedDirective} from "../directives/button/button-outlined.directive";
+import {
+    Component,
+    ElementRef,
+    HostBinding,
+    Input,
+    ViewChild
+} from "@angular/core";
 
 @Component({
     selector: 'u-button',
@@ -9,11 +12,17 @@ import {ButtonOutlinedDirective} from "../directives/button/button-outlined.dire
     styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-    @Input() variant!: 'primary' | 'danger';
+    @Input() variant!: 'primary' | 'danger' | 'simple';
+    @Input() disabled!: boolean | string;
+
+    @HostBinding('attr.disabled')
+    get isDisabled(): string | null {
+        return this.disabled === '' || this.disabled === true ? '' : null;
+    }
 
     @ViewChild('buttonElement') buttonElement!: ElementRef;
-    public mouseX!: number;
-    public mouseY!: number;
+    public mouseX: number = 0;
+    public mouseY: number = 0;
     public waveSize!: number;
 
     public onMouseMove(event: MouseEvent) {
