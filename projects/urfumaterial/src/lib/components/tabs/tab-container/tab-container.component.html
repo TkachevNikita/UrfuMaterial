@@ -1,0 +1,14 @@
+<ul class="u-tab__list">
+    @for (tab of tabs; track tab) {
+        <li
+            (click)="selectTab(tab)"
+            class="u-tab__item"
+            [ngClass]="{
+                'u-tab__item--active': tab.activeTab
+            }"
+        >
+            {{tab.title}}
+        </li>
+    }
+</ul>
+<ng-content></ng-content>

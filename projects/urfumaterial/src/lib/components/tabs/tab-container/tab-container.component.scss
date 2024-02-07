@@ -1,0 +1,34 @@
+@import "../../../../styles/styles";
+@import "../../../../styles/constants";
+
+.u-tab {
+    &__list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+        text-align: center;
+        cursor: pointer;
+        color: $light-primary;
+        width: 100%;
+
+        &:after {
+            margin-top: 10px;
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $primary;
+            transition: width .5s ease-in-out;
+        }
+
+        &--active {
+            color: $primary;
+
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}

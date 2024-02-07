@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {UButtonModule} from "./components/button/button.module";
+import {UTabContainerModule} from "./components/tabs/tab-container/tab-container.module";
+import {UTabModule} from "./components/tabs/tab/tab.module";
 
 @NgModule({
     declarations: [],
     imports: [
         CommonModule,
-        UButtonModule
+        UButtonModule,
+        UTabContainerModule,
+        UTabModule
     ],
     exports: [
-        UButtonModule
+        UButtonModule,
+        UTabModule,
+        UTabContainerModule
     ]
 })
 export class UrfuMaterialModule {}
