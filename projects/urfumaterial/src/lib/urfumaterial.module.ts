@@ -7,15 +7,14 @@ import {UTabModule} from "./components/tabs/tab/tab.module";
 @NgModule({
     declarations: [],
     imports: [
-        CommonModule,
         UButtonModule,
         UTabContainerModule,
-        UTabModule
+        UTabModule,
     ],
     exports: [
         UButtonModule,
         UTabModule,
-        UTabContainerModule
+        UTabContainerModule,
     ]
 })
 export class UrfuMaterialModule {}

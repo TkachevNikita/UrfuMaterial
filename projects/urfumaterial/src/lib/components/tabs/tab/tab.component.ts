@@ -1,4 +1,5 @@
 import {Component, Input} from "@angular/core";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
     selector: 'u-tab',
@@ -6,7 +7,7 @@ import {Component, Input} from "@angular/core";
     styleUrls: ['./tab.component.scss']
 })
 export class UTabComponent {
-    @Input() public title!: string;
+    @Input() public tabTitle!: string;
     public activeTab: boolean = false;
 
 }
