@@ -4,6 +4,9 @@
     position: sticky;
     padding: 15px;
     width: 250px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
 
 .nav__list {

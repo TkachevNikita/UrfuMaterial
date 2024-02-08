@@ -20,3 +20,8 @@ export * from './lib/components/tabs/tab-container/tab-container.module'
 //Иконки
 export * from './lib/components/icon/icon.component'
 export * from './lib/components/icon/icon.module';
+
+
+//Инпуты
+export * from './lib/components/input/input.component'
+export * from './lib/components/input/input.module'

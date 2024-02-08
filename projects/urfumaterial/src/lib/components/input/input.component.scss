@@ -1,0 +1,37 @@
+.u-input {
+    position: relative;
+    margin: 20px 0;
+}
+.u-input input {
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 20px 10px 20px 25px;
+    display: block;
+    //width: 100%;
+    transition: border-color 0.3s;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+}
+.u-input input:focus {
+    border-color: #007bff;
+}
+.u-input label {
+    position: absolute;
+    top: 35%;
+    left: 25px;
+    cursor: text;
+    font-size: 16px;
+    transition: all 0.3s;
+    color: #999;
+    background-color: rgb(255, 255, 255);
+    padding: 0 4px;
+    margin-left: -4px;
+}
+.u-input input:focus ~ label,
+.u-input input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 20px;
+    font-size: 12px;
+    color: #007bff;
+}
