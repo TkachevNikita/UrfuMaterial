@@ -1,29 +1,9 @@
-<h2>Кнопки</h2>
-<div class="container" style="display:flex;gap:20px;margin-bottom:50px;">
-    <u-button basic variant="primary" (click)="onClick()">Выбрать</u-button>
-    <u-button basic variant="simple" (click)="onClick()">Выбрать</u-button>
-    <u-button outlined variant="primary" (click)="onClick()">Выбрать</u-button>
-    <u-button outlined variant="simple" (click)="onClick()">Выбрать</u-button>
+<div class="app">
+    <app-header></app-header>
+    <div class="app__content">
+        <app-nav></app-nav>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
-<h2>Табы</h2>
-<div class="container">
-    <u-tab-container>
-        <u-tab tabTitle="вкладка 1">
-            Первая вкладка
-        </u-tab>
-        <u-tab tabTitle="вкладка 2">
-            Вторая вкладка
-        </u-tab>
-        <u-tab tabTitle="вкладка 3">
-            Третья вкладка
-        </u-tab>
-        <u-tab tabTitle="вкладка 4">
-            4 вкладка
-        </u-tab>
-        <u-tab tabTitle="вкладка 5">
-            5 вкладка
-        </u-tab>
-    </u-tab-container>
-</div>
-
-<u-icon name="active">active</u-icon>

@@ -1,0 +1,19 @@
+.container {
+    margin: 20px 50px;
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    //height: 100%;
+}
+
+.app,
+.app__content {
+    height: 100%;
+}
+
+.app__content {
+    display: flex;
+}

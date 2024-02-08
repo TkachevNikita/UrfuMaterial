@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {UButtonModule, UIconModule, UTabContainerModule, UTabModule} from "urfumaterial";
+import {HeaderComponent} from "./components/header/header.component";
+import {NavComponent} from "./components/nav/nav.component";
 
 @Component({
     selector: 'app-root',
@@ -9,14 +11,9 @@ import {UButtonModule, UIconModule, UTabContainerModule, UTabModule} from "urfum
     standalone: true,
     imports: [
         RouterOutlet,
-        UButtonModule,
-        UTabContainerModule,
-        UTabModule,
-        UIconModule,
+        HeaderComponent,
+        NavComponent
     ],
 })
 export class AppComponent {
-    onClick() {
-        console.log(1);
-    }
 }
