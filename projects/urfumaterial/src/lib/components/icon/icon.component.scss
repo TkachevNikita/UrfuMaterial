@@ -2,10 +2,12 @@
     font-family: 'Urfu Material Icons';
     src: url('../../assets/fonts/urfu-ui-icon-font.woff2') format('woff2');
 }
+
 [class*='icon-']:before{
     display: inline-block;
     font-family: 'Urfu Material Icons', sans-serif;
     line-height: 1;
+    font-size: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
