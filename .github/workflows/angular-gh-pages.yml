@@ -19,7 +19,9 @@ jobs:
               run: npm install
 
             - name: Build project
-              run: npm run build -- --output-path=dist
+              run: |
+                npm run build-библиотеку
+                npm run build-приложение
 
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4.5.0

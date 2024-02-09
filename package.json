@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-библиотеку": "ng build urfumaterial --configuration=production",
+    "build-приложение": "ng build --configuration=production --base-href=/UrfuMaterial/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
