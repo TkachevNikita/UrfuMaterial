@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
     push:
         branches:
-            - main
+            - main  # Или ваша основная ветка
 
 jobs:
     build_and_deploy:
@@ -13,7 +13,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '14' # Укажите желаемую версию Node.js
 
             - name: Install dependencies
               run: npm install
@@ -22,8 +22,8 @@ jobs:
               run: npm run build -- --output-path=dist
 
             - name: Deploy to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@v4.1.4
+              uses: JamesIves/github-pages-deploy-action@v4.5.0
               with:
-                  branch: gh-pages
-                  folder: dist
-                  token: ${{ secrets.GH_PAGES_TOKEN }}
+                  branch: gh-pages  # Ветка, на которую будет происходить развертывание
+                  folder: dist      # Папка, из которой будет развертываться приложение
+                  token: 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  # Используйте секретный токен, созданный ранее
