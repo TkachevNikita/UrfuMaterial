@@ -1,0 +1,16 @@
+import { Component, Input } from "@angular/core";
+import * as i0 from "@angular/core";
+export class UTabComponent {
+    constructor() {
+        this.activeTab = false;
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.1.2", ngImport: i0, type: UTabComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "17.1.2", type: UTabComponent, selector: "u-tab", inputs: { tabTitle: "tabTitle" }, ngImport: i0, template: "@if (activeTab) {\n    <div class=\"u-tab\">\n        <div class=\"u-tab__content\">\n            <ng-content></ng-content>\n        </div>\n    </div>\n}\n", styles: ["@import\"https://fonts.googleapis.com/css2?family=Montserrat&display=swap\";@import\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap\";@import\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap\";*{font-family:Montserrat,sans-serif;margin:0;padding:0}ul{text-decoration:none;list-style-type:none}\n"] }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.2", ngImport: i0, type: UTabComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'u-tab', template: "@if (activeTab) {\n    <div class=\"u-tab\">\n        <div class=\"u-tab__content\">\n            <ng-content></ng-content>\n        </div>\n    </div>\n}\n", styles: ["@import\"https://fonts.googleapis.com/css2?family=Montserrat&display=swap\";@import\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap\";@import\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap\";*{font-family:Montserrat,sans-serif;margin:0;padding:0}ul{text-decoration:none;list-style-type:none}\n"] }]
+        }], propDecorators: { tabTitle: [{
+                type: Input
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFiLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL3VyZnVtYXRlcmlhbC9zcmMvbGliL2NvbXBvbmVudHMvdGFicy90YWIvdGFiLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL3VyZnVtYXRlcmlhbC9zcmMvbGliL2NvbXBvbmVudHMvdGFicy90YWIvdGFiLmNvbXBvbmVudC5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDLE1BQU0sZUFBZSxDQUFDOztBQVEvQyxNQUFNLE9BQU8sYUFBYTtJQUwxQjtRQU9XLGNBQVMsR0FBWSxLQUFLLENBQUM7S0FFckM7OEdBSlksYUFBYTtrR0FBYixhQUFhLCtFQ1IxQiw4SkFPQTs7MkZEQ2EsYUFBYTtrQkFMekIsU0FBUzsrQkFDSSxPQUFPOzhCQUtELFFBQVE7c0JBQXZCLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudCwgSW5wdXR9IGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XG5pbXBvcnQge2FuaW1hdGUsIHN0YXRlLCBzdHlsZSwgdHJhbnNpdGlvbiwgdHJpZ2dlcn0gZnJvbSBcIkBhbmd1bGFyL2FuaW1hdGlvbnNcIjtcblxuQENvbXBvbmVudCh7XG4gICAgc2VsZWN0b3I6ICd1LXRhYicsXG4gICAgdGVtcGxhdGVVcmw6ICd0YWIuY29tcG9uZW50Lmh0bWwnLFxuICAgIHN0eWxlVXJsczogWycuL3RhYi5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIFVUYWJDb21wb25lbnQge1xuICAgIEBJbnB1dCgpIHB1YmxpYyB0YWJUaXRsZSE6IHN0cmluZztcbiAgICBwdWJsaWMgYWN0aXZlVGFiOiBib29sZWFuID0gZmFsc2U7XG5cbn1cbiIsIkBpZiAoYWN0aXZlVGFiKSB7XG4gICAgPGRpdiBjbGFzcz1cInUtdGFiXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJ1LXRhYl9fY29udGVudFwiPlxuICAgICAgICAgICAgPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PlxuICAgICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbn1cbiJdfQ==
