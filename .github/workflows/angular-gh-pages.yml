@@ -13,7 +13,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v2
               with:
-                  node-version: '14' # Укажите желаемую версию Node.js
+                  node-version: '20.11' # Укажите желаемую версию Node.js
 
             - name: Install dependencies
               run: npm install
