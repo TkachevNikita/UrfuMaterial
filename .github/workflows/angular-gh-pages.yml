@@ -28,6 +28,5 @@ jobs:
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4.5.0
               with:
-                  branch: gh-pages  # Ветка, на которую будет происходить развертывание
-                  folder: dist      # Папка, из которой будет развертываться приложение
-                  token: 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  # Используйте секретный токен, созданный ранее
+                  branch: gh-pages
+                  folder: dist
