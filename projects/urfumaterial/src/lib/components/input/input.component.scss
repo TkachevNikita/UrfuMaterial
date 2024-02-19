@@ -4,9 +4,9 @@
 }
 .u-input input {
     border: 2px solid #ccc;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 16px;
-    padding: 20px 10px 20px 25px;
+    padding: 15px 10px 15px 25px;
     display: block;
     //width: 100%;
     transition: border-color 0.3s;
@@ -15,10 +15,11 @@
 }
 .u-input input:focus {
     border-color: #007bff;
+    outline: none;
 }
 .u-input label {
     position: absolute;
-    top: 35%;
+    top: 32%;
     left: 25px;
     cursor: text;
     font-size: 16px;

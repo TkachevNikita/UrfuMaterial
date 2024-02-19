@@ -1,2 +1,6 @@
 <h2>Текстовое поле</h2>
-<u-input></u-input>
+<form [formGroup]="formGroup">
+    <u-input formControlName="input"></u-input>
+    <u-button basic variant="primary" (click)="onClick()">Выбрать</u-button>
+</form>
+
