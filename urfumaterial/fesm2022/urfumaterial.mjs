@@ -1,7 +1,8 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, Input, HostBinding, ViewChild, Directive, NgModule, QueryList, ContentChildren } from '@angular/core';
+import { Injectable, Component, Input, HostBinding, ViewChild, Directive, NgModule, QueryList, ContentChildren, forwardRef } from '@angular/core';
 import * as i1 from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as i1$1 from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { of } from 'rxjs';
@@ -236,12 +237,42 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.2", ngImpor
         }] });
 
 class UInputComponent {
+    constructor() {
+        this._onTouched = () => { };
+        this._onChange = () => { };
+    }
+    registerOnChange(fn) {
+        this._onChange = fn;
+    }
+    registerOnTouched(fn) {
+        this._onTouched = fn;
+    }
+    writeValue(value) {
+        this.value = value;
+    }
+    onChange(event) {
+        const newValue = event.target.value;
+        this._onChange(newValue);
+        this._onTouched();
+    }
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.1.2", ngImport: i0, type: UInputComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.1.2", type: UInputComponent, selector: "u-input", ngImport: i0, template: "<div class=\"u-input\">\n    <input type=\"text\" id=\"name\" placeholder=\" \">\n    <label for=\"name\">\u0412\u0430\u0448\u0435 \u0438\u043C\u044F</label>\n</div>\n", styles: [".u-input{position:relative;margin:20px 0}.u-input input{border:2px solid #ccc;border-radius:16px;font-size:16px;padding:20px 10px 20px 25px;display:block;transition:border-color .3s;background-color:#fff;width:500px}.u-input input:focus{border-color:#007bff}.u-input label{position:absolute;top:35%;left:25px;cursor:text;font-size:16px;transition:all .3s;color:#999;background-color:#fff;padding:0 4px;margin-left:-4px}.u-input input:focus~label,.u-input input:not(:placeholder-shown)~label{top:-10px;left:20px;font-size:12px;color:#007bff}\n"] }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.1.2", type: UInputComponent, selector: "u-input", providers: [
+            {
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => UInputComponent),
+                multi: true
+            }
+        ], ngImport: i0, template: "<div class=\"u-input\">\n    <input type=\"text\" id=\"name\" placeholder=\" \" (input)=\"onChange($event)\" [value]=\"value\">\n    <label for=\"name\">\u0412\u0430\u0448\u0435 \u0438\u043C\u044F</label>\n</div>\n", styles: [".u-input{position:relative;margin:20px 0}.u-input input{border:2px solid #ccc;border-radius:8px;font-size:16px;padding:15px 10px 15px 25px;display:block;transition:border-color .3s;background-color:#fff;width:500px}.u-input input:focus{border-color:#007bff;outline:none}.u-input label{position:absolute;top:32%;left:25px;cursor:text;font-size:16px;transition:all .3s;color:#999;background-color:#fff;padding:0 4px;margin-left:-4px}.u-input input:focus~label,.u-input input:not(:placeholder-shown)~label{top:-10px;left:20px;font-size:12px;color:#007bff}\n"] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.2", ngImport: i0, type: UInputComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'u-input', template: "<div class=\"u-input\">\n    <input type=\"text\" id=\"name\" placeholder=\" \">\n    <label for=\"name\">\u0412\u0430\u0448\u0435 \u0438\u043C\u044F</label>\n</div>\n", styles: [".u-input{position:relative;margin:20px 0}.u-input input{border:2px solid #ccc;border-radius:16px;font-size:16px;padding:20px 10px 20px 25px;display:block;transition:border-color .3s;background-color:#fff;width:500px}.u-input input:focus{border-color:#007bff}.u-input label{position:absolute;top:35%;left:25px;cursor:text;font-size:16px;transition:all .3s;color:#999;background-color:#fff;padding:0 4px;margin-left:-4px}.u-input input:focus~label,.u-input input:not(:placeholder-shown)~label{top:-10px;left:20px;font-size:12px;color:#007bff}\n"] }]
+            args: [{ selector: 'u-input', providers: [
+                        {
+                            provide: NG_VALUE_ACCESSOR,
+                            useExisting: forwardRef(() => UInputComponent),
+                            multi: true
+                        }
+                    ], template: "<div class=\"u-input\">\n    <input type=\"text\" id=\"name\" placeholder=\" \" (input)=\"onChange($event)\" [value]=\"value\">\n    <label for=\"name\">\u0412\u0430\u0448\u0435 \u0438\u043C\u044F</label>\n</div>\n", styles: [".u-input{position:relative;margin:20px 0}.u-input input{border:2px solid #ccc;border-radius:8px;font-size:16px;padding:15px 10px 15px 25px;display:block;transition:border-color .3s;background-color:#fff;width:500px}.u-input input:focus{border-color:#007bff;outline:none}.u-input label{position:absolute;top:32%;left:25px;cursor:text;font-size:16px;transition:all .3s;color:#999;background-color:#fff;padding:0 4px;margin-left:-4px}.u-input input:focus~label,.u-input input:not(:placeholder-shown)~label{top:-10px;left:20px;font-size:12px;color:#007bff}\n"] }]
         }] });
 
 class UInputModule {
