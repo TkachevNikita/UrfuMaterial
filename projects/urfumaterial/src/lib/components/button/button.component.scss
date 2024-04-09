@@ -2,26 +2,22 @@
 @import "../../../styles/constants";
 
 .u-btn {
-    padding: 15px 50px;
+    padding: 15px 40px;
     box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
     border-radius: 10px;
     border: none;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     white-space: nowrap;
     cursor: pointer;
     position: relative;
     transition: background-color .6s ease;
     overflow: hidden;
-    width: 100%;
+    width: inherit;
 
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
-
-        &:after {
-
-        }
     }
 
     &:not([disabled]) {
@@ -30,8 +26,6 @@
             position: absolute;
             width: 0;
             height: 0;
-            top: 50%;
-            left: 50%;
             top: var(--mouse-y);
             left: var(--mouse-x);
             transform-style: flat;
@@ -51,6 +45,10 @@
 
     &--basic {
         color: #fff;
+
+        &-simple {
+            color: #000;
+        }
 
         &-primary {
             background-color: $primary;

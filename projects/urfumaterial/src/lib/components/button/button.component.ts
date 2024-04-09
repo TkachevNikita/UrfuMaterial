@@ -12,7 +12,9 @@ import {
     styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-    @Input() variant!: 'primary' | 'danger' | 'simple';
+    @Input({
+        required: true
+    }) variant!: 'primary' | 'danger' | 'simple';
     @Input() disabled!: boolean | string;
 
     @HostBinding('attr.disabled')
@@ -29,7 +31,6 @@ export class ButtonComponent {
         const rect = this.buttonElement.nativeElement.getBoundingClientRect();
         this.mouseX = event.clientX - rect.left;
         this.mouseY = event.clientY - rect.top;
-
         const maxWidth = Math.max(this.mouseX, rect.width - this.mouseX);
         const maxHeight = Math.max(this.mouseY, rect.height - this.mouseY);
         this.waveSize = Math.sqrt(maxWidth ** 2 + maxHeight ** 2) * 2;
