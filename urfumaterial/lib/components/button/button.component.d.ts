@@ -10,5 +10,5 @@ export declare class ButtonComponent {
     waveSize: number;
     onMouseMove(event: MouseEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonComponent, "u-button", never, { "variant": { "alias": "variant"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; }, {}, never, ["*"], false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonComponent, "u-button", never, { "variant": { "alias": "variant"; "required": true; }; "disabled": { "alias": "disabled"; "required": false; }; }, {}, never, ["*"], false, never>;
 }
