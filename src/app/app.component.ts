@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {UButtonModule, UIconModule, UTabContainerModule, UTabModule} from "urfumaterial";
+import {UrfuMaterialModule} from "urfumaterial";
 import {HeaderComponent} from "./components/header/header.component";
 import {NavComponent} from "./components/nav/nav.component";
 
@@ -12,7 +12,8 @@ import {NavComponent} from "./components/nav/nav.component";
     imports: [
         RouterOutlet,
         HeaderComponent,
-        NavComponent
+        NavComponent,
+        UrfuMaterialModule,
     ],
 })
 export class AppComponent {
