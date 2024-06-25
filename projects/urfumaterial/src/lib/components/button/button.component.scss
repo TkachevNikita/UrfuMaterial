@@ -52,22 +52,30 @@
 
         &-primary {
             background-color: $primary;
-            &:hover {
-                background-color: $secondary-primary;
+            &:not([disabled]) {
+                &:hover {
+                    background-color: $dark-primary;
+                }
             }
         }
 
         &-danger {
             background-color: $danger;
-            &:hover {
-                background-color: $secondary-danger;
+
+            &:not([disabled]) {
+                &:hover {
+                    background-color: $secondary-danger;
+                }
             }
+
         }
 
         &-simple {
             background-color: $simple;
-            &:hover {
-                background-color: $simple;
+            &:not([disabled]) {
+                &:hover {
+                    background-color: $simple;
+                }
             }
         }
     }
@@ -82,8 +90,8 @@
             &:not([disabled]) {
                 &:hover {
                     color: #fff;
-                    border-color: $secondary-primary;
-                    background-color: $secondary-primary;
+                    border-color: $dark-primary;
+                    background-color: $dark-primary;
                 }
             }
         }
