@@ -15,9 +15,7 @@ import {HighlightModule} from "ngx-highlightjs";
     ]
 })
 export class CodeComponent {
-    @Input({
-        required: true
-    })
-    public code!: string;
+    @Input({ required: true }) public code!: string;
+    @Input() public language: string = 'html';
 
 }

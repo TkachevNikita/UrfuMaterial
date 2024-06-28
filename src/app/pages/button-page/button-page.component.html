@@ -8,7 +8,18 @@
     <u-button basic disabled variant="danger" (click)="onClick()">Подать заявку</u-button>
 </div>
 
-<app-code [code]="code"></app-code>
+<u-tab-container>
+    <u-tab tabTitle="example.component.html">
+        <app-code [code]="htmlCode"></app-code>
+    </u-tab>
+    <u-tab tabTitle="example.component.ts">
+        <app-code [code]="typeScriptCode" language="typescript"></app-code>
+    </u-tab>
+    <u-tab tabTitle="example.component.scss">
+        <app-code [code]="cssCode" language="css"></app-code>
+    </u-tab>
+</u-tab-container>
+
 
 <div class="page__section">
     <h3 class="page__section--title">
