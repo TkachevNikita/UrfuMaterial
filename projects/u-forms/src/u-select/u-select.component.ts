@@ -50,6 +50,7 @@ export class USelectComponent<T>
 
   public placeholder = input('');
   public multiple = input(false);
+  public disabled = input(false);
   public isOpen = signal(false);
 
   public openedChange = output<boolean>();
