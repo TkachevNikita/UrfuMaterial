@@ -1,4 +1,9 @@
-<div class="u-select" [class.isOpen]="isOpen()" (click)="togglePanel()">
+<div
+  class="u-select"
+  [class.isOpen]="isOpen()"
+  [class.disabled]="disabled()"
+  (click)="togglePanel()"
+>
   <div class="u-select__value">
     @if (displayValue) {
       {{ displayValue }}
