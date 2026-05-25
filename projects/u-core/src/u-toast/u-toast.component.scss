@@ -1,0 +1,80 @@
+:host {
+  display: contents;
+}
+
+.u-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 10px;
+
+  &__info {
+    color: var(--blue-main);
+    border: 1px solid var(--blue-60);
+    background-color: var(--blue-20);
+  }
+
+  &__success {
+    color: var(--green);
+    border: 1px solid var(--green);
+    background-color: var(--light-green);
+  }
+
+  &__fail {
+    color: var(--red-main);
+    border: 1px solid var(--red-main);
+    background-color: var(--red-20);
+  }
+
+  &__warning {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    background-color: var(--cream);
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__close {
+    color: inherit;
+    display: inline-flex;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__enter {
+    animation: u-toast-enter 0.2s ease-out forwards;
+  }
+
+  &__leave {
+    animation: u-toast-leave 0.16s ease-in forwards;
+  }
+}
+
+@keyframes u-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateX(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes u-toast-leave {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(24px) scale(0.98);
+  }
+}

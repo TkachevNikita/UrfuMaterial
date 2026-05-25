@@ -1,0 +1,15 @@
+@if (isVisible()) {
+  <div
+    class="u-toast u-toast__{{ status() }}"
+    animate.enter="u-toast__enter"
+    animate.leave="u-toast__leave"
+  >
+    <u-icon class="u-toast__icon" [iconId]="icon()" />
+    <div class="u-toast__text">
+      {{ data() }}
+    </div>
+    <button class="u-toast__close" type="button" (click)="close()">
+      <u-icon [size]="16" [iconId]="'cross'" />
+    </button>
+  </div>
+}
