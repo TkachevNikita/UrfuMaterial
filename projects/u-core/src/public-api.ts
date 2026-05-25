@@ -7,3 +7,5 @@ export * from './u-modal/u-modal.component';
 export * from './u-modal/u-modal.service';
 export * from './u-modal/u-modal.token';
 export * from './u-modal/u-modal-ref';
+export * from './u-toast/u-toast.component';
+export * from './u-toast/u-toast.service';
