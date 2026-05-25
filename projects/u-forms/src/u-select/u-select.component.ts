@@ -18,7 +18,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Overlay, OverlayRef } from '@angular/cdk/overlay';
+import { ConnectedPosition, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { take } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -133,18 +133,27 @@ export class USelectComponent<T>
 
   private open(): void {
     const hostElement = this.elementRef.nativeElement as HTMLElement;
+    const positions: ConnectedPosition[] = [
+      {
+        originX: 'start',
+        originY: 'bottom',
+        overlayX: 'start',
+        overlayY: 'top',
+        offsetY: 4,
+      },
+      {
+        originX: 'start',
+        originY: 'top',
+        overlayX: 'start',
+        overlayY: 'bottom',
+        offsetY: -4,
+      },
+    ];
     const positionStrategy = this.overlay
       .position()
       .flexibleConnectedTo(hostElement)
-      .withPositions([
-        {
-          originX: 'start',
-          originY: 'bottom',
-          overlayX: 'start',
-          overlayY: 'top',
-        },
-      ])
-      .withDefaultOffsetY(4);
+      .withPositions(positions)
+      .withViewportMargin(8);
 
     this.overlayRef = this.overlay.create({
       positionStrategy,
