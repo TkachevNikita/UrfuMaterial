@@ -17,7 +17,7 @@ type Story = StoryObj<UIconComponent>;
 
 export const Default: Story = {
   args: {
-    iconId: 'icon-active',
+    iconId: 'active',
     size: 24,
   },
   render: (args) => ({
