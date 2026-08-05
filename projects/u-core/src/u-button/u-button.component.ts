@@ -13,6 +13,9 @@ import { UIconComponent } from '../u-icon/u-icon.component';
   styleUrl: './u-button.component.scss',
   imports: [UIconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[style.pointer-events]': 'disabled() ? "none" : "auto"',
+  },
 })
 export class UButtonComponent {
   private readonly sizeClass = computed(() => `u-button__${this.size()}`);
