@@ -65,9 +65,9 @@ export class USelectComponent<T>
   public ngAfterContentInit(): void {
     this.options.changes
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => this.bindOptionClicks());
+      .subscribe(() => this.syncOptions());
 
-    this.bindOptionClicks();
+    this.syncOptions();
   }
 
   public ngOnDestroy(): void {
@@ -81,6 +81,7 @@ export class USelectComponent<T>
       this.selected = value ? [value as T] : [];
     }
     this.markSelectedOptions();
+    this.cdr.markForCheck();
   }
 
   public registerOnChange(fn: (value: T | T[]) => void): void {
@@ -186,6 +187,12 @@ export class USelectComponent<T>
     this.options.forEach((option) => {
       option.registerParent(this);
     });
+  }
+
+  private syncOptions(): void {
+    this.bindOptionClicks();
+    this.markSelectedOptions();
+    this.cdr.markForCheck();
   }
 
   private onChange: (value: T | T[]) => void = () => {};
