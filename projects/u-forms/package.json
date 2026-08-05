@@ -1,11 +1,11 @@
 {
   "name": "@urfu-ui/u-forms",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "peerDependencies": {
     "@angular/common": "^21.2.0",
     "@angular/core": "^21.2.0",
     "@angular/cdk": "^21.2.0",
-    "@urfu-ui/u-core": "0.0.2"
+    "@urfu-ui/u-core": "0.0.4"
   },
   "dependencies": {
     "tslib": "^2.3.0"

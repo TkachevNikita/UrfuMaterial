@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  HostListener,
   input,
 } from '@angular/core';
 import { UIconComponent } from '../u-icon/u-icon.component';
@@ -13,6 +12,9 @@ import { UIconComponent } from '../u-icon/u-icon.component';
   styleUrl: './u-button.component.scss',
   imports: [UIconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[style.pointer-events]': 'disabled() ? "none" : "auto"',
+  },
 })
 export class UButtonComponent {
   private readonly sizeClass = computed(() => `u-button__${this.size()}`);
@@ -36,13 +38,4 @@ export class UButtonComponent {
   public readonly icon = input<string>();
   public readonly iconPosition = input<'left' | 'right'>('left');
   public readonly iconSize = input<number>(20);
-
-  @HostListener('click', ['$event'])
-  public onClick(event: Event): void {
-    if (this.disabled()) {
-      event.stopPropagation();
-      event.preventDefault();
-      return;
-    }
-  }
 }
