@@ -16,9 +16,17 @@
   padding: 12px;
   background: none;
   transition: all 0.3s ease-in-out;
-  font-size: 14px;
-  line-height: 20px;
   width: inherit;
+
+  &__value {
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 20px;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   &__placeholder {
     color: var(--gray-60);
