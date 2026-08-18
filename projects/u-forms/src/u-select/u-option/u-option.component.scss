@@ -10,13 +10,25 @@
   align-items: center;
   gap: 10px;
   color: var(--black-main);
-  padding: 14px 16px;
+  padding: 12px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 20px;
   border-bottom: 1px solid var(--blue-30);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 
   &__check {
     pointer-events: none;
+  }
+
+  &__selected {
+    font-weight: 600;
+    color: var(--blue-main);
   }
 
   &:hover {
