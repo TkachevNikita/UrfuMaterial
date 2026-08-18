@@ -13,10 +13,11 @@
   gap: 10px;
   border: 1px solid var(--gray-20);
   border-radius: 8px;
-  padding: 15px;
+  padding: 12px;
   background: none;
   transition: all 0.3s ease-in-out;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 20px;
   width: inherit;
 
   &__placeholder {
@@ -24,6 +25,7 @@
   }
 
   &__icon {
+    color: var(--blue-main);
     transition: transform 0.2s ease;
 
     &.open {

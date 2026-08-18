@@ -6,12 +6,13 @@ import {
 } from '@angular/core';
 import { USelectComponent } from '../u-select.component';
 import { UCheckboxComponent } from '../../u-checkbox/u-checkbox.component';
+import { UIconComponent } from '@urfu-ui/u-core';
 
 @Component({
   selector: 'u-option',
   templateUrl: './u-option.component.html',
   styleUrls: ['./u-option.component.scss'],
-  imports: [UCheckboxComponent],
+  imports: [UCheckboxComponent, UIconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UOptionComponent<T> {
